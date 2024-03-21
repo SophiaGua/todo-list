@@ -7,7 +7,31 @@
 </head>
 <body>
     <div class="cabeçalho">
-sddsd
+        todo-list
     </div>
+        <div class="corpo">
+           <input id="texto">
+        <button onclick="add();"> add </button>
+        <script>
+            function add(){
+                const divNova = document.createElement('div');
+                const h2Nova = document.createElement('h2');
+                const texto = document.getElementById('texto').value;
+                h2Nova.innerHTML = texto;
+                divNova.appendChild(h2Nova);
+                document.body.appendChild(divNova);
+
+                const btRemover = document.createElement('button');
+                btRemover.innerHTML = "x";
+                btRemover.addEventListener('click', function(){
+                    divNova.remove();
+                })
+                divNova.appendChild(btRemover);
+            }
+        </script>  
+        </div>
+   
+
+
 </body>
 </html>
