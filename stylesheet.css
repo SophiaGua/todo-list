@@ -1,3 +1,8 @@
-.Remove{
-background-color: aqua;
+body{
+background-color: rgb(219, 122, 3);
+}
+
+.cabecalho{
+background-color: #da250d00;
+border-radius: 30px;
 }

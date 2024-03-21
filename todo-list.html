@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="./stylesheet.css" media="screen" />
 </head>
 <body>
-    <div class="cabeçalho">
+    <div class="cabecalho">
         o que fazer?
     </div>
         <div class="corpo">
@@ -25,12 +25,32 @@
                 h2Nova.innerHTML = texto;
                 divNova.appendChild(h2Nova);
                 document.body.appendChild(divNova);
+                
                 const btRemover = document.createElement('button');
                 btRemover.innerHTML = "Excluir";
+
+                const btFeito = document.createElement('button');
+                btFeito.innerHTML = "Feito";
+                //estilo btFeito
+                btFeito.style.background = 'none';
+                btFeito.style.borderColor = 'black';
+                btFeito.style.borderRadius = '20px';
+                //estilo btRemover
+                btRemover.style.background = 'none';
+                btRemover.style.borderColor = 'black';
+                btRemover.style.borderRadius = '20px';
+                btRemover.style.marginLeft = '300px';
+
                 btRemover.addEventListener('click', function(){
                     divNova.remove();
                 })
+                btFeito.addEventListener('click',function(){
+                    h2Nova.style.textDecoration = 'line-through';
+                    h2Nova.style.color = 'gray';
+                })
+                divNova.appendChild(btFeito);
                 divNova.appendChild(btRemover);
+                       
             }
             }
         </script>  
