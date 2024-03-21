@@ -4,29 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheet.css" media="screen" />
 </head>
 <body>
     <div class="cabeçalho">
-        todo-list
+        o que fazer?
     </div>
         <div class="corpo">
            <input id="texto">
         <button onclick="add();"> add </button>
         <script>
             function add(){
+                if (document.getElementById('texto').value == ""){
+
+                    alert("digite algo para ser adicionado!");
+                }else{                
                 const divNova = document.createElement('div');
                 const h2Nova = document.createElement('h2');
                 const texto = document.getElementById('texto').value;
                 h2Nova.innerHTML = texto;
                 divNova.appendChild(h2Nova);
                 document.body.appendChild(divNova);
-
                 const btRemover = document.createElement('button');
-                btRemover.innerHTML = "x";
+                btRemover.innerHTML = "Excluir";
                 btRemover.addEventListener('click', function(){
                     divNova.remove();
                 })
                 divNova.appendChild(btRemover);
+            }
             }
         </script>  
         </div>
