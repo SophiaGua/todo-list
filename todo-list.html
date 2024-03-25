@@ -32,31 +32,42 @@
                 const btFeito = document.createElement('button');
                 btFeito.innerHTML = "Feito";
                 //estilo btFeito
-                btFeito.style.background = 'none';
-                btFeito.style.borderColor = 'black';
+                btFeito.style.background = 'green';
+                btFeito.style.borderColor = 'green';
                 btFeito.style.borderRadius = '20px';
                 //estilo btRemover
-                btRemover.style.background = 'none';
-                btRemover.style.borderColor = 'black';
+                btRemover.style.background = 'red';
+                btRemover.style.borderColor = 'red';
                 btRemover.style.borderRadius = '20px';
                 btRemover.style.marginLeft = '300px';
-
+                //estilo btFeito
+                document.getElementById('texto').value=''; 
                 btRemover.addEventListener('click', function(){
                     divNova.remove();
                 })
+
+              
                 btFeito.addEventListener('click',function(){
                     h2Nova.style.textDecoration = 'line-through';
                     h2Nova.style.color = 'gray';
+                })
+                btFeito.addEventListener('click',function(){
+                    btFeito.innerHTML = "Desfeito";
+                    btFeito.style.background = 'orange';
+                    btFeito.style.borderColor = 'orange';
+                    btFeito.style.borderRadius = '20px';
                 })
                 divNova.appendChild(btFeito);
                 divNova.appendChild(btRemover);
                        
             }
             }
+
         </script>  
         </div>
-   
+ 
 
+    </script>
 
 </body>
 </html>
