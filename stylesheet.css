@@ -1,27 +1,27 @@
 body{
     margin-left: 20%;
     margin-right: 20%;
-background-color: rgb(231, 218, 201);
-text-align: center;
+    background-color: rgb(255, 252, 247);
+    text-align: center;
 }
 
 .cabecalho{
     margin-top: 30px;
-    padding: 2px;
     text-align: center;
     font-size: 30px;   
-border-radius: 30px;
-background-color: aqua;
-}
-
-.corpo{
-    border-radius: 30px;
-    background-color: rgb(0, 4, 255);
-    margin-top: 30px;
+    background-color: rgb(127, 175, 175);
     padding: 20px;
     text-align: center;
+    border-radius: 10px;
 }
+
 input{
     height: 20px;
-    width: 500px;    border-radius: 20px;
+    width: 500px;    
+    border-radius: 20px;
+}
+
+.add{
+    border-radius: 10px;
+    padding: 6px;
 }
